@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "docsai"
+version = "0.1.0"
+description = ""
+authors = ["Johan Rendon <johanrendo1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+docs-ai = "docsai.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+typer = "^0.12.5"
+google-generativeai = "^0.7.2"
+toml = "^0.10.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
