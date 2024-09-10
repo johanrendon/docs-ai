@@ -42,19 +42,18 @@ def config(
     config_path: Annotated[Path, typer.Option(help="Configuration path")] = Path.home()
     / "docsai.toml",
 ) -> None:
-
     """
     Configures the API key for the Gemini service and stores the configuration in a TOML file.
 
     Args:
         api_key (str): The API key required to authenticate and interact with the Gemini service.
         config_path (Path, optional): The path to the configuration file. Defaults to 'docsai.toml' in the user's home directory.
-    
+
     Raises:
         typer.Exit: If the configuration file does not exist, the function prints an error message and exits the program.
-    
+
     Functionality:
-    - Opens the TOML configuration file at the specified path (`config_path`). 
+    - Opens the TOML configuration file at the specified path (`config_path`).
     - If the file does not exist, it prompts the user to create the file and exits the program.
     - If the file exists but does not contain the necessary sections ('API' or 'PATH'), these sections are created.
     - The API key is stored in the 'API' section, and the path to the configuration file is stored in the 'PATH' section.
